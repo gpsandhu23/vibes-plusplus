@@ -1,46 +1,23 @@
 # vibes-plusplus
 
-## Evaluation framework for AI Dev Tools
+## Developer Centric Evaluation Framework for AI Dev Tools
 
 ### What developers want from AI Dev Tools
 
-- **Accurate**: Generate correct code.
-- **Fast**: Get the job done quickly.
-- **Easy to use**: Easy to use and understand.
-- **Steerable**: Customize the output to the user's needs and preferences.
-- **Testable**: Generate testable code so that I know it will work for my environment.
+- **Code Quality**: Generate production level high quality code.
+- **Context Retrieval**: Retrieve context from other files wihtout having to copy paste context into LLM prompts.
+- **Style guide adherence**: Adhere to the style guide for the project.
 
 
-### How to evaluate AI Dev Tools
+### How do we currently evaluate AI Dev Tools
 
-- **Accuracy**: HumanEval for the model and SWE bench for the agents
-- **Speed**: Measure the time it takes to complete a task.
-- **Ease of use**: Measure the ease of use of the tool.
-- **Steerability**: Measure the ability to customize the output to the user's needs and preferences.
-- **Testability**: Measure the ability to generate testable code.
+- **HumanEval**: Benchmark used by model providers to evaluate the accuracy of their models.
+- **SWE-Bench**: Benchmark used by CodeGen providers to evaluate the capabilities of their tools.
 
-#### What impacts accuracy?
 
-- **Model**: The LLM being used to generate the code. Do the tools use the latest SOTA models?
-- **Context**: The context being used to generate the code. Is the retrieval of context from other files working?
-- **Prompt**: The prompt being used to generate the code. Are the prompts making sure production level high quality code is generated?
+### What actually happens when a new tool is released?
 
-#### What impacts speed?
+Developers rely on mostly vibes to determine if a new tool is any good.
 
-- **Model**: The LLM being used to generate the code.
-- **Caching**: Whether the tool is using caching to speed up the generation process.
-
-#### What impacts ease of use?
-
-- **UI/UX**: The UI/UX of the tool.
-- **Documentation**: The documentation of the tool.
-
-#### What impacts steerability?
-
-- **Prompt**: The prompt being used to generate the code.
-- **Custom rules**: The custom rules being used to generate the code.
-
-#### What impacts testability?
-
-- **Test framework**: The test framework being used to run the generated code.
-- **Test cases**: The test cases being used to test the generated code.
+### How does Vibes++ help?
+Vibes++ is setup to easily evaluate the new tools on the same metrics that developers care about.
