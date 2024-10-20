@@ -22,8 +22,8 @@
 #### What impacts accuracy?
 
 - **Model**: The LLM being used to generate the code.
-- **Context**: The context being used to generate the code.
-- **Prompt**: The prompt being used to generate the code.
+- **Context**: The context being used to generate the code. Is the retrieval of context from other files working?
+- **Prompt**: The prompt being used to generate the code. Are the prompts making sure production level high quality code is generated?
 
 #### What impacts speed?
 
