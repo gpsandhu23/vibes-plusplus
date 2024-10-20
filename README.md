@@ -9,7 +9,7 @@
 - **Style guide adherence**: Adhere to the style guide for the project.
 
 
-### How do we currently evaluate AI Dev Tools
+### How do we currently evaluate AI CodeGen Tools
 
 - **HumanEval**: Benchmark used by model providers to evaluate the accuracy of their models.
 - **SWE-Bench**: Benchmark used by CodeGen providers to evaluate the capabilities of their tools.
