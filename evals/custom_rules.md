@@ -1,0 +1,5 @@
+Use a single underscore prefix for internal or private attributes and methods. This indicates that the item is meant for internal use within the class or module, but can still be accessed if needed. For example, '_calculate_total' or '_internal_cache'.
+For stronger privacy, use a double underscore prefix (without trailing underscores) for attributes. This invokes name mangling, making the attribute harder to access from outside the class. An example would be '__secret_key'.
+Magic methods, also known as dunder methods, use double underscores as both prefix and suffix. These are special methods with specific meanings in Python. Common examples include 'init', 'str', and 'len'.
+Constants should be in all uppercase letters with words separated by underscores. This clearly distinguishes them from variables and functions. Examples include 'MAX_RETRIES' or 'DEFAULT_TIMEOUT'.
+Use a single underscore as a name for temporary or throwaway variables. This is common in loops where you don't need the loop variable, or when unpacking values you don't intend to use. For instance, 'for _ in range(5):' or '_, value = some_pair'.

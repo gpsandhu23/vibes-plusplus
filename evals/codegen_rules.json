@@ -1,0 +1,42 @@
+[
+  {
+    "input": "Create a class called 'SecureDataManager' with a private attribute for storing sensitive data and a method to access it safely.",
+    "ideal": "class SecureDataManager:\n    def __init__(self, sensitive_data: str):\n        self.__sensitive_data = sensitive_data\n\n    def get_data(self) -> str:\n        return self.__sensitive_data"
+  },
+  {
+    "input": "Define a constant for the maximum number of retries and a function that uses it.",
+    "ideal": "MAX_RETRIES = 3\n\ndef retry_operation(operation: callable) -> Any:\n    for _ in range(MAX_RETRIES):\n        try:\n            return operation()\n        except Exception:\n            continue\n    raise Exception(f\"Operation failed after {MAX_RETRIES} retries\")"
+  },
+  {
+    "input": "Create a class 'CustomList' with a magic method to get the length of the list.",
+    "ideal": "class CustomList:\n    def __init__(self, items: List[Any]):\n        self._items = items\n\n    def __len__(self) -> int:\n        return len(self._items)"
+  },
+  {
+    "input": "Define a function that calculates the total price of items, using an internal helper function.",
+    "ideal": "def calculate_total_price(items: List[Dict[str, float]]) -> float:\n    def _calculate_item_price(item: Dict[str, float]) -> float:\n        return item['price'] * item.get('quantity', 1)\n\n    return sum(_calculate_item_price(item) for item in items)"
+  },
+  {
+    "input": "Create a class 'Logger' with a class-level constant for the default log level and an instance method to log messages.",
+    "ideal": "class Logger:\n    DEFAULT_LEVEL = 'INFO'\n\n    def __init__(self, level: str = DEFAULT_LEVEL):\n        self._level = level\n\n    def log(self, message: str) -> None:\n        print(f\"[{self._level}] {message}\")"
+  },
+  {
+    "input": "Define a function that processes a list of numbers, ignoring even numbers.",
+    "ideal": "def process_odd_numbers(numbers: List[int]) -> List[int]:\n    return [num for num in numbers if num % 2 != 0]"
+  },
+  {
+    "input": "Create a class 'TemperatureConverter' with a magic method to represent the object as a string.",
+    "ideal": "class TemperatureConverter:\n    def __init__(self, celsius: float):\n        self._celsius = celsius\n\n    def to_fahrenheit(self) -> float:\n        return (self._celsius * 9/5) + 32\n\n    def __str__(self) -> str:\n        return f\"{self._celsius}°C is {self.to_fahrenheit()}°F\""
+  },
+  {
+    "input": "Define a function that unpacks a tuple, ignoring the middle value.",
+    "ideal": "def process_tuple_data(data: Tuple[str, int, str]) -> Tuple[str, str]:\n    first, _, last = data\n    return first, last"
+  },
+  {
+    "input": "Create a class 'ConfigManager' with a private method to validate configuration and a public method to set configuration.",
+    "ideal": "class ConfigManager:\n    def __init__(self):\n        self._config = {}\n\n    def _validate_config(self, key: str, value: Any) -> bool:\n        # Implement validation logic here\n        return True\n\n    def set_config(self, key: str, value: Any) -> None:\n        if self._validate_config(key, value):\n            self._config[key] = value\n        else:\n            raise ValueError(f\"Invalid configuration: {key}={value}\")"
+  },
+  {
+    "input": "Define a constant for the default timeout and a function that uses it with an optional parameter.",
+    "ideal": "DEFAULT_TIMEOUT = 30\n\ndef fetch_data(url: str, timeout: int = DEFAULT_TIMEOUT) -> Dict[str, Any]:\n    # Implement data fetching logic here\n    pass"
+  }
+]
