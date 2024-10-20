@@ -2,7 +2,7 @@
 
 ## Developer Centric Evaluation Framework for AI Dev Tools
 
-### What developers want from AI Dev Tools
+### What developers want from AI CodeGen Tools
 
 - **Code Quality**: Generate production level high quality code.
 - **Context Retrieval**: Retrieve context from other files wihtout having to copy paste context into LLM prompts.
